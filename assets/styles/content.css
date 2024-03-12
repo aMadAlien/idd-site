@@ -1,0 +1,150 @@
+/* start section */
+.start_section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: url("../img/start-bg.png") center right no-repeat;
+}
+
+.start_title {
+    font-size: 95px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.start_title span {
+    display: block;
+}
+
+.start_title span:last-child {
+    color: var(--light-blue);
+}
+
+.start_title span:last-child::before {
+    content: "";
+    background: url("../img/icons/circle.png") no-repeat;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: -10px;
+}
+
+.start_desc {
+    font-size: 29px;
+    color: #fff;
+    padding: 37px 0;
+}
+
+.start_desc span {
+    color: var(--light-blue);
+}
+
+.start_btn-explore button {
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 785px) {
+    .start_section {
+        padding-top: 60px;
+        padding-bottom: 70px;
+        background: none;
+    }
+    .start_title {
+        font-size: 65px;
+    }
+    .start_title span:last-child::before {
+        width: 67px;
+        height: 67px;
+    }
+    .start_desc {
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .start_title {
+        font-size: 50px;
+    }
+    .start_title span:last-child::before {
+        width: 57px;
+        height: 57px;
+        margin-right: 10px;
+    }
+    .start_desc {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .start_section {
+        padding-bottom: 35px;
+    }
+    .start_title {
+        font-size: 35px;
+    }
+    .start_title span:last-child::before {
+        width: 35px;
+        height: 35px;
+        margin-bottom: -5px;
+    }
+}
+
+.scroller {
+    /* max-width: 1000px; */
+    margin-top: 15px;
+}
+
+.scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+    overflow: hidden;
+    /* -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+}
+
+.tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+:root {
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-primary-100: hsl(205, 15%, 58%);
+    --clr-primary-400: hsl(215, 25%, 27%);
+    --clr-primary-800: hsl(217, 33%, 17%);
+    --clr-primary-900: hsl(218, 33%, 9%);
+}
+
+.tag-list li {
+    padding: 15px 45px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--light-muted-blue);
+    border-radius: 132px;
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+.test {
+    background: red !important;
+}

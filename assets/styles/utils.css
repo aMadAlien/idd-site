@@ -6,8 +6,12 @@
 :root {
     --bg-blue: #0d1023;
     --muted-blue: #1a2045;
+    --light-muted-blue: #1B2147;
     --light-blue: #2365fa;
     --hovered-blue: #0f51e6;
+
+    --_animation-duration: 45s;
+    --_animation-direction: forwards;
 }
 
 body {
@@ -23,6 +27,9 @@ ol {
 a {
     text-decoration: none;
 }
+button {
+    border: none;
+}
 
 .img-container {
     position: relative;
@@ -37,22 +44,42 @@ a {
     object-fit: cover;
 }
 
-.square-btn {
-    padding: 40px 50px;
+.square-btn,
+.rounded-btn,
+.rounded-outline-btn {
     background-color: var(--light-blue);
-    border: none;
     color: #fff;
     font-weight: 600;
     font-size: 16px;
 }
 
-.square-btn:hover {
+.square-btn {
+    padding: 40px 50px;
+}
+
+.square-btn:hover,
+.rounded-btn:hover {
     background-color: var(--hovered-blue);
     cursor: pointer;
+}
+
+.rounded-btn,
+.rounded-outline-btn {
+    padding: 30px 80px;
+    border-radius: 28px;
+    border: 1px solid var(--light-blue);
+}
+
+.rounded-outline-btn {
+    background: transparent;
 }
 
 @media screen and (max-width: 665px) {
     .square-btn {
         padding: 30px 36px;
+    }
+    .rounded-btn,
+    .rounded-outline-btn {
+        width: 100%;
     }
 }
