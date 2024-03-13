@@ -105,8 +105,6 @@
 
 .scroller[data-animated="true"] {
     overflow: hidden;
-    /* -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent); */
 }
 
 .scroller[data-animated="true"] .scroller__inner {
@@ -127,16 +125,8 @@
     }
 }
 
-:root {
-    --clr-neutral-100: hsl(0, 0%, 100%);
-    --clr-primary-100: hsl(205, 15%, 58%);
-    --clr-primary-400: hsl(215, 25%, 27%);
-    --clr-primary-800: hsl(217, 33%, 17%);
-    --clr-primary-900: hsl(218, 33%, 9%);
-}
-
-.tag-list li {
-    padding: 15px 45px;
+.skills-list li {
+    padding: 17px 45px;
     font-size: 21px;
     font-weight: 700;
     color: #fff;
@@ -144,7 +134,101 @@
     border-radius: 132px;
 }
 
-/* for testing purposed to ensure the animation lined up correctly */
-.test {
-    background: red !important;
+/* cases section */
+.cases_section {
+    padding-top: 90px;
+}
+
+.cases_title {
+    font-size: 85px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cases_title span:not(.cases_no-nda) {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: var(--light-blue);
+}
+
+.cases_title .cases_no-nda {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 25px 40px;
+    border: 1px solid var(--light-blue);
+    border-radius: 99px;
+    display: inline-block;
+    transform: rotate(-5deg) translate(30px, -10px);
+}
+
+.cases_block {
+    padding-top: 44px;
+    /* max-width: 1142px; */
+    margin: 0 auto;
+}
+
+.cases_item {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.cases_item-img {
+    max-width: 540px;
+    width: 100%;
+    height: 340px;
+}
+
+.cases_item-img img {
+    border-radius: 21px;
+}
+
+.cases_name {
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.cases_skills {
+    display: flex;
+    gap: 10px;
+    margin: 21px 0;
+}
+
+.cases_skill {
+    font-size: 14px !important;
+    font-weight: 700;
+}
+
+.cases_skill span {
+    color: var(--light-blue);
+}
+
+.cases_desc {
+    color: #fff;
+    font-size: 20px;
+    line-height: 150%;
+    margin-bottom: 21px;
+}
+
+.cases_more-btn {
+    /* max-width: 1142px; */
+    /* width: 100%; */
+    display: block;
+    /* margin: 60px auto; */
+}
+
+.cases_more-btn span {
+    transform: translate(10px, 2.5px);
+    display: inline-block;
+    color: var(--light-blue);
+    font-size: 32px;
+}
+
+.cases_more-btn:hover span {
+    color: #fff;
 }
