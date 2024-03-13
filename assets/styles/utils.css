@@ -6,7 +6,7 @@
 :root {
     --bg-blue: #0d1023;
     --muted-blue: #1a2045;
-    --light-muted-blue: #1B2147;
+    --light-muted-blue: #1b2147;
     --light-blue: #2365fa;
     --hovered-blue: #0f51e6;
 
@@ -84,5 +84,6 @@ button {
     .rounded-btn,
     .rounded-outline-btn {
         width: 100%;
+        padding: 30px 50px;
     }
 }
